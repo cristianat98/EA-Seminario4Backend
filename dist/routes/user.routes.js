@@ -9,7 +9,7 @@ const user_controller_1 = __importDefault(require("../controllers/user.controlle
 const router = express_1.Router();
 //Peticiones HTTP (ruta, función del controlador)
 router.get('/user/' /*RUTA*/, user_controller_1.default.getUsers /*FUNCION DEL CONTROLADOR*/);
-router.get('/user/:nombre', user_controller_1.default.getUser);
+router.get('/user/:_id', user_controller_1.default.getUser);
 router.post('/user/register', user_controller_1.default.postUserDemo);
 router.put('/user/update/:id', user_controller_1.default.updateUser);
 router.delete('/user/delete/:id', user_controller_1.default.deleteUser);

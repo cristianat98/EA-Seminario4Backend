@@ -25,7 +25,7 @@ function getUsers(req, res) {
     });
 }
 function getUser(req, res) {
-    user_1.default.find({ "nombre": req.params.nombre }).populate('courses').then((data) => {
+    user_1.default.find({ "_id": req.params._id }).populate('courses').then((data) => {
         let status = 200;
         if (data == null)
             status = 404;
@@ -43,6 +43,7 @@ function postUserDemo(req, res) {
         "correo": req.body.correo,
         "telefono": req.body.telefono,
         "grado": req.body.grado,
+        "URL": req.body.URL,
         "courses": req.body.courses
     });
     console.log("El nombre es", req.body.nombre);
@@ -61,9 +62,10 @@ function updateUser(req, res) {
     const correo = req.body.correo;
     const telefono = req.body.telefono;
     const grado = req.body.grado;
+    const URL = req.body.URL;
     const courses = req.body.courses;
     user_1.default.update({ "_id": id }, { $set: { "nombre": nombre, "apellidos": apellidos, "edad": edad,
-            "correo": correo, "telefono": telefono, "grado": grado, "courses": courses } }).then((data) => {
+            "correo": correo, "telefono": telefono, "grado": grado, "URL": URL, "courses": courses } }).then((data) => {
         res.status(201).json(data);
     }).catch((err) => {
         res.status(500).json(err);

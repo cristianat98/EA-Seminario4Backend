@@ -45,6 +45,9 @@ const userSchema = new mongoose_1.Schema({
     grado: {
         type: String
     },
+    URL: {
+        type: String
+    },
     courses: [{
             type: mongoose_1.Schema.Types.ObjectId,
             ref: course_1.default

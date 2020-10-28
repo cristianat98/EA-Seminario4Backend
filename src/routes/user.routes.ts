@@ -6,7 +6,7 @@ const router = Router();
 
 //Peticiones HTTP (ruta, función del controlador)
 router.get('/user/' /*RUTA*/, userController.getUsers /*FUNCION DEL CONTROLADOR*/);
-router.get('/user/:nombre', userController.getUser);
+router.get('/user/:_id', userController.getUser);
 router.post('/user/register', userController.postUserDemo);
 router.put('/user/update/:id', userController.updateUser);
 router.delete('/user/delete/:id',userController.deleteUser);

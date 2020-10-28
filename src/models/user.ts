@@ -10,6 +10,7 @@ export interface IUser extends Document {
     correo: string;
     telefono: number;
     grado: string;
+    URL: string;
     courses: ICourse['_id']; //Relacion con la coleccion courses
 }
 
@@ -31,6 +32,9 @@ const userSchema = new Schema({
         type:Number
     },
     grado: {
+        type:String
+    },
+    URL: {
         type:String
     },
     courses: [{
