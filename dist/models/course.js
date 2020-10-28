@@ -24,6 +24,9 @@ const mongoose_1 = __importStar(require("mongoose"));
 const courseSchema = new mongoose_1.Schema({
     nombre: {
         type: String
+    },
+    creditos: {
+        type: Number
     }
 });
 //Exportamos modelo para poder usarlo

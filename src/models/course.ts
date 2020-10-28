@@ -4,12 +4,17 @@ import mongoose, { Schema, Document} from 'mongoose';
 const courseSchema = new Schema({
     nombre: {
         type: String
+    },
+
+    creditos: {
+        type: Number
     }
 });
 
 //Interfaz para tratar respuesta como documento
 export interface ICourse extends Document {
     nombre: string;
+    creditos: number;
 }
 
 //Exportamos modelo para poder usarlo

@@ -13,7 +13,8 @@ function getCourses(req:Request, res:Response):void {
 
 function postCourse (req: Request, res: Response): void {
     const course = new Course({
-        "nombre": req.body.nombre
+        "nombre": req.body.nombre,
+        "creditos": req.body.creditos
     });
     console.log(req.body);
     course.save().then((data) => {

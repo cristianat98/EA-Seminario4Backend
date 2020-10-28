@@ -16,7 +16,8 @@ function getCourses(req, res) {
 }
 function postCourse(req, res) {
     const course = new course_1.default({
-        "nombre": req.body.nombre
+        "nombre": req.body.nombre,
+        "creditos": req.body.creditos
     });
     console.log(req.body);
     course.save().then((data) => {
