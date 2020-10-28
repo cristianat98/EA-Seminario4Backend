@@ -22,3 +22,5 @@ var port = process.env.PORT || 3001;
 server.listen(port, function(){
    console.log('listening in http://localhost:' + port);
 });
+
+//Cambiar a socket.js e intentar que inicie los dos servidores a la vez. Cambiar el package.json para que el start incluya tanto el index.js como el socket.js de la carpeta dist. 
