@@ -24,7 +24,7 @@ function getUsers(req:Request, res:Response): void {
 }
 
 function getUser(req:Request, res:Response): void {
-    User.find({"_id":req.params._id}).populate('courses').then((data)=>{
+    User.findOne({"_id":req.params._id}).populate('courses').then((data)=>{
         let status: number = 200;
         if(data==null) status = 404;
         console.log(data);

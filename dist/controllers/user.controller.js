@@ -25,7 +25,7 @@ function getUsers(req, res) {
     });
 }
 function getUser(req, res) {
-    user_1.default.find({ "_id": req.params._id }).populate('courses').then((data) => {
+    user_1.default.findOne({ "_id": req.params._id }).populate('courses').then((data) => {
         let status = 200;
         if (data == null)
             status = 404;
