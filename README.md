@@ -58,9 +58,30 @@ $ npx tsc --init -> Crea fichero con opciones del compilador (tsconfig.json)
 
 - Ejecutar peticiones
 
+
 ## Autores
 
 Iván Requena
 
 Carlos Vázquez
+
+## Versión 2.0
+
+En esta versión, Cristian Armesto y Miquel Puspa Torres también componentes del grupo 1 de EA, han incorporado diferentes funcionalidades al backend. Primero han creado un Front-End que consume este backend. 
+Las modificaciones hechas en el backend, son básicamente, para introducir el uso de sockets.
+
+Para introducir sockets, hemos instalado las dependencias siguientes:
+
+- npm install socket.io
+- npm install @types/socket.io -D (para descargarlos en las depenmdencias Dev)
+
+En esta versión tenemos que iniciar los servidores por separado, puesto que un puerto lo consumirá el backend (3000) y otro el servidor de sockets (3001).
+
+Para iniciar el backend debemos introducir el comando:
+- npm run dev
+
+Para iniciar el servidor de sockets debemos movernos a al carpeta donde esta el fichero index.js (en nuestro caso es la carpeta src) y allí ejecutar el siguiente comando:
+- node index.js
+
+Hasta aquí la explicacón. 
 
