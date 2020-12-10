@@ -1,10 +1,5 @@
-//FICHERO EJECUCIÓN DEL PROYECTO
-import app from './app'; //app exportada en app.ts
-//Ejecutamos la conexion a la BBDD antes de escuchar al server
-import './database'; 
 
-let server = require('http').createServer(app);
-let io = require('socket.io')(server);
+/*const { io } = require('../index');
 
 io.on('connection', (socket: any) => {
     console.log(socket);
@@ -20,8 +15,6 @@ io.on('connection', (socket: any) => {
     socket.on('send-message', (message: any) => {
       io.emit('message', {msg: message.text, user: socket.username, createdAt: new Date()});    
     });
-  });
+  });*/
 
-
-app.listen(app.get('port')); //Recuperamos puerto de app.ts
-console.log('Server in port', app.get('port'));
+  //export default (io);
